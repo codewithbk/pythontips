@@ -6,6 +6,6 @@ It is some basic thing that I made in python.😊😊
 
 Here the link by project
 
-> [link of tablewritter.py file] (https://tablewrittergame.codewithbk.repl.run/)
+> [link of tablewritter.py file](https://tablewrittergame.codewithbk.repl.run/)
 
-> [link of squarefinder.py file] (https://Squarerootwritter.codewithbk.repl.run)
+> [link of squarefinder.py file](https://Squarerootwritter.codewithbk.repl.run)
