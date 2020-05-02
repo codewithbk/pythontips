@@ -8,4 +8,6 @@ Here the link by project
 
 > [link of tablewritter.py file](https://tablewrittergame.codewithbk.repl.run/)
 
-> [link of squarefinder.py file](https://Squarerootwritter.codewithbk.repl.run)
+> [link of squarefinder.py file](https://Squarerootwritter.codewithbk.repl.run/)
+
+> [link of removeduplicatestring.py file] (https://Removeduplicatestring.codewithbk.repl.run/)
