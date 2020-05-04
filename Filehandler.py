@@ -1,54 +1,127 @@
-import os 
+import os
 import shutil
 import time
 
 files = os.listdir()
 path = os.getcwd()
+#print(len(os.listdir()))
 
-music = ['.mp3','.wav', '.aac', '.ogg','.aif',]
-coding = ['.java','.html','.cpp','.css','.js','.jsp','.asp','.php','.xhtml','.class', '.h','.swift',]
-compressed_file = ['.zip','.rar','.pkg','.rpm','.tar.gz', '.z',]
-log_file = ['.log','.xml','.sav', '.dat',]
-data_base = ['.dbf', '.db', '.sql',]
-ms_office = ['.ods','.xls','.xlsm','.xlsx','.cab','.cur','cur','.odt']
-window_file = ['.bat','mdb',]
-video = ['.mp4','.mov','.mov','.mkv',]
-pdf_file = ['.pdf','.doc','.docx']
-txt = ['.txt','.text','.tex']
-software = ['.exe','.msi']
-hidden = ['',]
-image = ['.jpg','.jpeg','.png',]
+if len(os.listdir())  < 1:
+    for i in range(10):
+        user = input(
+            'opps no file to test the code are you enter some file \n type "q" we ask for ten file ')
+        if user == 'q':
+          break
+        else:
+          lis = []
+          for i in user:
+            lis.append(i)
+
+          if '.' in lis:
+            with open(user, 'w') as fp: 
+              pass
+          else:
+            print('You enter a wrong')
+            input()
+
+
+music = [
+    '.mp3',
+    '.wav',
+    '.aac',
+    '.ogg',
+    '.aif',
+]
+coding = [
+    '.java',
+    '.html',
+    '.cpp',
+    '.css',
+    '.js',
+    '.jsp',
+    '.asp',
+    '.php',
+    '.xhtml',
+    '.class',
+    '.h',
+    '.swift',
+] # i enter not .py because they move coding file
+compressed_file = [
+    '.zip',
+    '.rar',
+    '.pkg',
+    '.rpm',
+    '.tar.gz',
+    '.z',
+]
+log_file = [
+    '.log',
+    '.xml',
+    '.sav',
+    '.dat',
+]
+data_base = [
+    '.dbf',
+    '.db',
+    '.sql',
+]
+ms_office = ['.ods', '.xls', '.xlsm', '.xlsx', '.cab', '.cur', 'cur', '.odt']
+window_file = [
+    '.bat',
+    'mdb',
+]
+video = [
+    '.mp4',
+    '.mov',
+    '.mov',
+    '.mkv',
+]
+pdf_file = ['.pdf', '.doc', '.docx']
+txt = ['.txt', '.text', '.tex']
+software = ['.exe', '.msi']
+hidden = [
+    '',
+]
+image = [
+    '.jpg',
+    '.jpeg',
+    '.png',
+]
 
 # if you add more tool you make list like this # check what folder i create it already exists or not.
 
+
 def iffolderis(folder):
-  if not os.path.exists(folder):
-    os.mkdir(folder)
-    time.sleep(1)
-    print(f'"{folder}" folder created!')
-  elif os.path.exists(folder):
-    user_input = input(f"\nOpps '{folder}' folder is already exists You enter a name: ")
-    total.append(user_input)
-    if len(user_input) > 0:
-      os.mkdir(user_input + 'files')
-      time.sleep(1)
-      print(f'"{folder}" folder created!')
-    else:
-      print('Operation fail because you cant enter any thing')
+    if not os.path.exists(folder):
+        os.mkdir(folder)
+        time.sleep(1)
+        print(f'"{folder}" folder created!')
+    elif os.path.exists(folder):
+        user_input = input(
+            f"\nOpps '{folder}' folder is already exists You enter a name: ")
+        total.append(user_input)
+        if len(user_input) > 0:
+            os.mkdir(user_input + 'files')
+            time.sleep(1)
+            print(f'"{folder}" folder created!')
+        else:
+            print('Operation fail because you cant enter any thing')
 
 
 def movefile(path, anotherpath):
-   shutil.move(path, anotherpath)
+    shutil.move(path, anotherpath)
+
 
 def totalmake(files, choice, folder):
-  iffolderis(folder)
-  for files in files:
-    if os.path.splitext(files)[1].lower() in choice:
-      total = path + '/' + files
-      total2 = path + '/' + folder + '/' + files  
-      movefile(total, total2)
-      print(f'Done "{files}" file move in "{folder}" folder')
-      
+    iffolderis(folder)
+    for files in files:
+        if os.path.splitext(files)[1].lower() in choice:
+            total = path + '/' + files
+            total2 = path + '/' + folder + '/' + files
+            movefile(total, total2)
+            print(f'Done "{files}" file move in "{folder}" folder')
+
+
 totalmake(files, image, 'Image file')
 totalmake(files, hidden, 'Hidden file')
 totalmake(files, software, 'Software')
@@ -67,18 +140,18 @@ files = os.listdir()
 total = []
 
 for i in files:
-  if os.path.isdir(i):
-    total.append(i)
-    
+    if os.path.isdir(i):
+        total.append(i)
+
 #print(total)
 #print(files)
 
 for i in total:
-  if len(os.listdir(i)) == 0:
-    directory = i
-    parent = os.path.join(path, directory) 
-    os.rmdir(parent)
-    print(f'Remove unwanted folder "{i}"')
-    
+    if len(os.listdir(i)) == 0:
+        directory = i
+        parent = os.path.join(path, directory)
+        os.rmdir(parent)
+        print(f'Remove unwanted folder "{i}"')
+
 time.sleep(2)
 print('Done :)')
