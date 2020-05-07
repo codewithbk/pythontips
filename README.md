@@ -18,6 +18,6 @@ Here the link by project
 
 > [link of file filehandler.py file](https://Filehandler.codewithbk.repl.run)
 
-> [link of tictokgame.py file}(https://Tictactogame.codewithbk.repl.run)
+> [link of tictokgame.py file](https://Tictactogame.codewithbk.repl.run)
 
 >[link of loginandregister.py file](https://Tictactogame.codewithbk.repl.run)
