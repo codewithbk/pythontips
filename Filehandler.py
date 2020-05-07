@@ -4,6 +4,7 @@ import time
 
 files = os.listdir()
 path = os.getcwd()
+print("\n Hey These is auto seperate the file and also detele those folder are completly empty so you run carefully !")
 
 music = ['.mp3','.wav', '.aac', '.ogg','.aif',]
 coding = ['.java','.html','.cpp','.css','.js','.jsp','.asp','.php','.xhtml','.class', '.h','.swift',]
@@ -28,14 +29,7 @@ def iffolderis(folder):
     time.sleep(1)
     print(f'"{folder}" folder created!')
   elif os.path.exists(folder):
-    user_input = input(f"\nOpps '{folder}' folder is already exists You enter a name: ")
-    total.append(user_input)
-    if len(user_input) > 0:
-      os.mkdir(user_input + 'files')
-      time.sleep(1)
-      print(f'"{folder}" folder created!')
-    else:
-      print('Operation fail because you cant enter any thing')
+    print(f"\nOperation fail because '{folder}' folder is already exists You delete those other wise change code : ")
 
 
 def movefile(path, anotherpath):
